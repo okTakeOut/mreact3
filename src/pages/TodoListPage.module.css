@@ -1,0 +1,44 @@
+.check{
+  color: #b7b9bc
+}
+.check:hover{
+  color: #008080
+}
+
+.counterClock{
+  color: #b7b9bc
+}
+.counterClock:hover{
+  color: #0d6efd
+}
+
+.trash{
+  color: #b7b9bc
+}
+.trash:hover{
+  color:#990030
+}
+
+.file_text{
+  color:#b7b9bc
+}
+
+.file_text:hover{
+  color:#505b61
+}
+
+.saves{
+  color:#b7b9bc;
+}
+
+.saves:hover{
+  color:#0d6efd
+}
+
+.cancel{
+  color:#b7b9bc;
+}
+
+.cancel:hover{
+  color:#505b61
+}

@@ -1,0 +1,134 @@
+오후 11:15 2024-01-24
+npx create-react-app
+
+오후 11:16 2024-01-24
+firebase 생성
+
+오후 11:18 2024-01-24
+firebase Cloud Firestore, asia(seoul), test-mode
+
+오후 11:19 2024-01-24
+npm i firebase
+
+오전 8:00 2024-01-25
+bootstrap 적용
+
+오전 8:02 2024-01-25
+react-router-dom 설치
+npm i react-router-dom
+
+오전 8:09 2024-01-25
+__WEBPACK_DEFAULT_EXPORT__' before initialization
+Router가 최상위에 있지 않았었음
+
+오전 8:14 2024-01-25
+Router 적용
+
+오전 8:23 2024-01-25
+Navbar 적용
+
+오전 8:32 2024-01-25
+useNavigate 적용
+간단 router 생성
+
+오전 9:58 2024-01-25
+dbchecker에서 db가 안 읽어짐
+firebase 경로 check
+
+오전 10:23 2024-01-25
+npm i firestore
+
+오전 10:40 2024-01-25
+npm i uuid
+
+오후 3:07 2024-01-25
+firebase getDocs할때,
+docs->Array()->_document->data->value->mapValue->fields에서 확인 가능
+
+24-01-31
+map 사용할 때,  unique key를 위한 uuid 사용은 매우 좋은 생각인줄 알았으나.. 재사용되는 경우가 발생해서 아니었다는 것
+북마크해놓고 나중에 다시보자
+sorting에 대해서 공부했다.. 그 과정에서 localeCompare는 문자열 비교라는 것
+onClick={function} 보다
+onClick={()=>function()}이 낫다. 나중에 다시 확인
+
+style에 여러개 입력하기 + 삼항연산자 사용가능
+input date에 있는 달력아이콘 선택이 안되서 포인터 커서를 못하는 문제가 있었음.
+webkit 어쩌구였는데... 이건 새로 css파일을 import 시켰다.
+근데 생각해보니 굳이 새로 css파일 안해도되고 그냥 app.css에다가 해서 해결했다.
+
+24-02-01
+오늘은 edit하고 delete를 만들어보자..
+-> 실패
+
+24-02-02
+edit delete만들기 2트
+하기전에 dblist 분리
+
+Third-party cookie will be blocked. Learn more in the Issues tab.
+이런게 떴는데 너무 무섭다 뭐냐? 나중에하자
+
+dblist 분리과정에서 emit 적용시키기
+
+props의 props 개귀찮은데 함수 객체로 넘겨주거나 import하는 방법은 없을까
+이게 되네 -> 근데 그럼 다시 정리해야 되잖아
+
+혹시? 하면서 했지만 useState는 객체 안에 못넣더라
+
+아아아아아아
+useEffect 잘 안되는거 ?
+useState 비동기 처리때문
+
+그럼? useAsync 라는게 있다는데 혼자 머리통 박살내고 있었음
+
+24-02-03
+edit delete만들기 3일차
+state 동기처리 2일차
+왜냐면? 동기처리 만들고 해야하기 때문
+1. Suspend 써보기
+
+
+The final argument passed to useEffect changed size between renders.
+The order and size of this array must remain constant.
+
+
+24-02-05
+어.. 해결하긴했는데 이렇게 해결하고 싶진 않았는데..
+동기처리후 렌더링은 일단포기
+비구조화 문법으로 필요한 데이터만 스플릿하는거 좋은거같음 자주쓰게될거같다.
+
+24-02-06
+getDocs filter 내가 안만들고 쿼리로 검색할수도있음
+
+24-02-07
+buttonCommand 받아오기
+
+delete구현 도중
+ (in promise) TypeError: n.indexOf is not a function
+ doc로 받아온 data가 참조값이기 때문
+ 
+ delete collection할때 문제발생할 수 있으므로, 필드별 삭제를 권장?
+
+  하위 콜렉션에 액세스가 가능하기 때문
+ https://firebase.google.com/docs/firestore/solutions/delete-collections?hl=ko
+ doc 삭제
+
+ 걍 다시 합칠게요..
+
+
+ 24-02-10
+ 임시 footer 만들기
+
+ submit 이후 rerender 다루기
+
+setDate할 때도 new Date()로 만들어줬어야함
+submit 이후 form reset이 안되는데.. ant design Form control 훅이 있긴하던데..
+useRef로 특정 DOM에 접근이 된다
+
+window.location.reload(); 이거로 걍 새로고침 했음
+
+
+sudo vi /etc/systemd/resolved.config
+에서 
+nameserver 172.21.160.1을
+8.8.8.8로 바꿔줬음

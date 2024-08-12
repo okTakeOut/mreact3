@@ -1,0 +1,9 @@
+.page_name{
+  font-size:1.4rem;
+  font-weight: bolder;
+}
+
+.sort_filter{
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
